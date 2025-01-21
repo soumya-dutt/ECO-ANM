@@ -1,0 +1,28 @@
+SUCCESS 31004 Checks are good. Proceeding with minECO!formed cluster 0 with contacts 
+[['X:GLN:2' 'X:GLU:201' '2']]
+formed cluster 1 with contacts 
+[['X:GLU:5' 'X:GLY:77' '2']
+ ['X:GLY:9' 'X:PRO:76' '2']]
+formed cluster 3 with contacts 
+[['X:GLN:32' 'X:ARG:48' '2']
+ ['X:HIS:34' 'X:SER:47' '2']]
+formed cluster 4 with contacts 
+[['X:ARG:48' 'X:GLU:201' '2']]
+formed cluster 7 with contacts 
+[['X:MET:135' 'X:SER:156' '2']
+ ['X:SER:139' 'X:SER:156' '2']]
+formed cluster 8 with contacts 
+[['X:MET:135' 'X:LEU:144' '2']]
+formed cluster 9 with contacts 
+[['X:VAL:141' 'X:ASP:162' '2']]
+formed cluster 10 with contacts 
+[['X:THR:143' 'X:VAL:151' '2']]
+formed cluster 2 with contacts 
+[['X:GLN:32' 'X:ASP:194' '3']]
+formed cluster 6 with contacts 
+[['X:TYR:131' 'X:THR:221' '3']]
+formed cluster 5 with contacts 
+[['X:ILE:130' 'X:ALA:136' '5']]
+total ECO for this pathway:27
+the minECO pathway (by cluster):[0, 1, 3, 4, 7, 8, 9, 10, 2, 6, 5]
+the minECO pathway (by contact):[[['X:GLN:2', 'X:GLU:201']], [['X:GLU:5', 'X:GLY:77'], ['X:GLY:9', 'X:PRO:76']], [['X:GLN:32', 'X:ARG:48'], ['X:HIS:34', 'X:SER:47']], [['X:ARG:48', 'X:GLU:201']], [['X:MET:135', 'X:SER:156'], ['X:SER:139', 'X:SER:156']], [['X:MET:135', 'X:LEU:144']], [['X:VAL:141', 'X:ASP:162']], [['X:THR:143', 'X:VAL:151']], [['X:GLN:32', 'X:ASP:194']], [['X:TYR:131', 'X:THR:221']], [['X:ILE:130', 'X:ALA:136']]]

@@ -1,0 +1,59 @@
+SUCCESS 31005 Checks are good. Proceeding with minECO!formed cluster 0 with contacts 
+[['X:GLY:1' 'X:ALA:100' '2']]
+formed cluster 2 with contacts 
+[['X:SER:2' 'X:SER:27' '3']
+ ['X:SER:2' 'X:ILE:26' '4']
+ ['X:GLY:3' 'X:ASP:28' '3']
+ ['X:GLY:3' 'X:SER:27' '2']
+ ['X:GLY:5' 'X:ASP:28' '2']]
+formed cluster 3 with contacts 
+[['X:SER:2' 'X:ASN:18' '2']]
+formed cluster 4 with contacts 
+[['X:ILE:13' 'X:LYS:43' '2']]
+formed cluster 5 with contacts 
+[['X:PRO:22' 'X:GLU:80' '8']
+ ['X:ASP:23' 'X:GLU:80' '8']
+ ['X:ASP:23' 'X:VAL:76' '6']
+ ['X:THR:24' 'X:VAL:76' '5']
+ ['X:ASP:25' 'X:LYS:77' '6']
+ ['X:ASP:25' 'X:VAL:76' '6']
+ ['X:SER:27' 'X:VAL:74' '2']
+ ['X:SER:27' 'X:HIS:73' '2']
+ ['X:SER:27' 'X:LEU:72' '2']
+ ['X:ALA:29' 'X:LEU:72' '2']]
+formed cluster 6 with contacts 
+[['X:ILE:26' 'X:ARG:86' '3']
+ ['X:SER:27' 'X:ARG:86' '2']]
+formed cluster 7 with contacts 
+[['X:GLY:37' 'X:ASN:85' '3']
+ ['X:VAL:38' 'X:LEU:88' '2']
+ ['X:LYS:39' 'X:LEU:88' '2']]
+formed cluster 8 with contacts 
+[['X:VAL:49' 'X:GLU:97' '2']]
+formed cluster 9 with contacts 
+[['X:PRO:51' 'X:PHE:87' '3']
+ ['X:PRO:51' 'X:ASN:85' '2']
+ ['X:PRO:51' 'X:ARG:84' '3']
+ ['X:VAL:52' 'X:ASN:85' '2']]
+formed cluster 12 with contacts 
+[['X:ARG:84' 'X:PRO:102' '3']
+ ['X:ASN:85' 'X:PRO:102' '3']
+ ['X:GLY:89' 'X:ALA:106' '2']]
+formed cluster 13 with contacts 
+[['X:ARG:86' 'X:TYR:130' '2']]
+formed cluster 14 with contacts 
+[['X:LEU:95' 'X:THR:115' '2']
+ ['X:LEU:99' 'X:THR:115' '2']]
+formed cluster 11 with contacts 
+[['X:GLY:83' 'X:SER:123' '6']
+ ['X:ARG:84' 'X:ALA:122' '4']
+ ['X:ASN:85' 'X:SER:123' '5']
+ ['X:ASN:85' 'X:ALA:122' '4']
+ ['X:PHE:87' 'X:ALA:122' '3']]
+formed cluster 1 with contacts 
+[['X:SER:2' 'X:MET:82' '4']]
+formed cluster 10 with contacts 
+[['X:ASN:54' 'X:ASP:60' '4']]
+total ECO for this pathway:35
+the minECO pathway (by cluster):[0, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 11, 1, 10]
+the minECO pathway (by contact):[[['X:GLY:1', 'X:ALA:100']], [['X:SER:2', 'X:SER:27'], ['X:SER:2', 'X:ILE:26'], ['X:GLY:3', 'X:ASP:28'], ['X:GLY:3', 'X:SER:27'], ['X:GLY:5', 'X:ASP:28']], [['X:SER:2', 'X:ASN:18']], [['X:ILE:13', 'X:LYS:43']], [['X:PRO:22', 'X:GLU:80'], ['X:ASP:23', 'X:GLU:80'], ['X:ASP:23', 'X:VAL:76'], ['X:THR:24', 'X:VAL:76'], ['X:ASP:25', 'X:LYS:77'], ['X:ASP:25', 'X:VAL:76'], ['X:SER:27', 'X:VAL:74'], ['X:SER:27', 'X:HIS:73'], ['X:SER:27', 'X:LEU:72'], ['X:ALA:29', 'X:LEU:72']], [['X:ILE:26', 'X:ARG:86'], ['X:SER:27', 'X:ARG:86']], [['X:GLY:37', 'X:ASN:85'], ['X:VAL:38', 'X:LEU:88'], ['X:LYS:39', 'X:LEU:88']], [['X:VAL:49', 'X:GLU:97']], [['X:PRO:51', 'X:PHE:87'], ['X:PRO:51', 'X:ASN:85'], ['X:PRO:51', 'X:ARG:84'], ['X:VAL:52', 'X:ASN:85']], [['X:ARG:84', 'X:PRO:102'], ['X:ASN:85', 'X:PRO:102'], ['X:GLY:89', 'X:ALA:106']], [['X:ARG:86', 'X:TYR:130']], [['X:LEU:95', 'X:THR:115'], ['X:LEU:99', 'X:THR:115']], [['X:GLY:83', 'X:SER:123'], ['X:ARG:84', 'X:ALA:122'], ['X:ASN:85', 'X:SER:123'], ['X:ASN:85', 'X:ALA:122'], ['X:PHE:87', 'X:ALA:122']], [['X:SER:2', 'X:MET:82']], [['X:ASN:54', 'X:ASP:60']]]
