@@ -22,7 +22,7 @@ module load gcc-12.1.0-gcc-11.2.0
 module load mesa-22.0.2-gcc-11.2.0
 
 
-source activate meld_new
+source activate eco
 
 python ANM-highthroughput-pipeline.py
 
