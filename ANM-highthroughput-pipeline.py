@@ -4,6 +4,36 @@ import glob
 import time
 from Bio import PDB
 
+def bash(bashCommand):
+    ''' 
+    Function to run bash commands and print the output
+
+    Parameters:
+    -----------
+    bashCommand: str
+        sbatch test.sh
+
+    Returns:
+    --------
+    output: str
+        Standard output of the command
+    error: str
+        Error message if any
+    '''
+    import subprocess
+    # print("\nBashCommand:\n%s\n" % (bashCommand))
+    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+    output, error = process.communicate()
+    output = output.decode("utf-8")
+    if not error == None:
+        error = error.decode("utf-8")
+    for line in output:
+        if "ERROR" in line:
+            print(line)
+    print("StandardOutput:\n%s\nError:%s\n" % (output, error))
+    return output, error
+
+
 def create_directories(base_dir):
     directories = ["step1", "step2", "step3/step3-1", "step3/step3-2", "step4", "step5"]
     for directory in directories:
@@ -106,6 +136,7 @@ def handle_step3(base_dir, num_particles, bin_files_dir):
         binary_file = os.path.join(bin_files_dir, "3_desc_one_surface_v2")
         check_and_copy(binary_file, os.path.join(base_dir, folder))
         copy_files(os.path.join(base_dir, "step2/minimized_struct_on_cusp"), os.path.join(base_dir, folder))
+        run_command(f"chmod +x 3_desc_one_surface_v2", cwd=os.path.join(base_dir, folder), timeout=300)
         run_command(f"./3_desc_one_surface_v2", cwd=os.path.join(base_dir, folder), timeout=300)
 
         # Count the number of output files and write num_structures_written files
@@ -137,6 +168,7 @@ def process_subdirectory(sub_dir, bin_files_dir):
     write_file_step1(sub_dir, num_particles)
     binary_file = os.path.join(bin_files_dir, "1_locate_struct_on_cusp")
     check_and_copy(binary_file, os.path.join(sub_dir, "step1/"))
+    run_command("chmod +x 1_locate_struct_on_cusp", cwd=os.path.join(sub_dir, "step1"))
     run_command("./1_locate_struct_on_cusp", cwd=os.path.join(sub_dir, "step1"))
 
     # Step 2
@@ -144,6 +176,7 @@ def process_subdirectory(sub_dir, bin_files_dir):
     binary_file = os.path.join(bin_files_dir, "2_find_min_on_cusp_v3")
     check_and_copy(binary_file, os.path.join(sub_dir, "step2/"))
     copy_files(os.path.join(sub_dir, "step1/initial_struct_on_cusp"), os.path.join(sub_dir, "step2/"))
+    run_command(f"chmod +x 2_find_min_on_cusp_v3", cwd=os.path.join(sub_dir, "step2"))
     run_command("./2_find_min_on_cusp_v3", cwd=os.path.join(sub_dir, "step2"))
 
     # Step 3
@@ -158,6 +191,7 @@ def process_subdirectory(sub_dir, bin_files_dir):
     copy_files(os.path.join(sub_dir, "step3/step3-1/num_structures_written_1"), os.path.join(sub_dir, "step4/"))
     copy_files(os.path.join(sub_dir, "step3/step3-2/OUT_COORDS_SURFACE_2_*"), os.path.join(sub_dir, "step4/"))
     copy_files(os.path.join(sub_dir, "step3/step3-2/num_structures_written_2"), os.path.join(sub_dir, "step4/"))
+    run_command(f"chmod +x 4_collec_ener", cwd=os.path.join(sub_dir, "step4"))
     run_command("./4_collec_ener", cwd=os.path.join(sub_dir, "step4"))
 
     # Step 5
@@ -165,6 +199,7 @@ def process_subdirectory(sub_dir, bin_files_dir):
     check_and_copy(binary_file, os.path.join(sub_dir, "step5/"))
     copy_files(os.path.join(sub_dir, "step4/COORDS_IMAGE_*"), os.path.join(sub_dir, "step5/"))
     num_images = count_files(os.path.join(sub_dir, "step5/COORDS_IMAGE_*"))
+    run_command(f"chmod +x 5_makepathway", cwd=os.path.join(sub_dir, "step5"))
     run_command(f"./5_makepathway -n {num_particles} -i {num_images} -a 0", cwd=os.path.join(sub_dir, "step5"))
 
 def main():
