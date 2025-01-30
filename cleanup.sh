@@ -8,7 +8,7 @@ FILES_TO_DELETE=("1_CA.pdb" "2_CB.pdb" "INPUT_STRUCTURE_1" "INPUT_STRUCTURE_2" \
 "PDB_INFO" "REFERENCE_FOR_ALIGNMENT" "INPUT_INFO_STRUCTURES")
 
 # Define file patterns to delete (e.g., *.log)
-FILE_PATTERNS=("*.log")
+FILE_PATTERNS=("*.txt")
 
 # Main directory to process (use current directory if not specified)
 MAIN_DIR=successful-eco
