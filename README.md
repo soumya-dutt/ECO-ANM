@@ -14,3 +14,8 @@ eco_anm.yml has the appropriate packages - with versions - and can be used to cr
 ```
 mamba create -f eco_anm.yml
 ```
+## 3
+```
+python3 per_frame_eco.py
+```
+Change the file path to directory that houses all the sub-directories of ANM pathways. 
